@@ -1,0 +1,47 @@
+{
+  "name": "cordova-plugin-screen-brightness",
+  "version": "1.0.0",
+  "description": "Cordova plugin to set the screen brightness of the app (e.g. full brightness while showing a QR code or a barcode) and restore the user's brightness afterwards.",
+  "cordova": {
+    "id": "cordova-plugin-screen-brightness",
+    "platforms": [
+      "android",
+      "ios"
+    ]
+  },
+  "files": [
+    "plugin.xml",
+    "www/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gidifrancia/cordova-plugin-screen-brightness.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gidifrancia/cordova-plugin-screen-brightness/issues"
+  },
+  "homepage": "https://github.com/gidifrancia/cordova-plugin-screen-brightness#readme",
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova",
+    "brightness",
+    "screen",
+    "qrcode",
+    "barcode"
+  ],
+  "engines": {
+    "cordovaDependencies": {
+      "1.0.0": {
+        "cordova-android": ">=10.0.0",
+        "cordova-ios": ">=6.0.0"
+      }
+    }
+  },
+  "author": "Gianluigi Di Francia",
+  "license": "MIT"
+}

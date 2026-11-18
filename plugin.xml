@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        id="cordova-plugin-screen-brightness"
+        version="1.0.0">
+    <name>Screen Brightness</name>
+    <description>Set the screen brightness of the app and restore the user's brightness afterwards.</description>
+    <license>MIT</license>
+    <keywords>cordova,brightness,screen,qrcode,barcode</keywords>
+    <repo>https://github.com/gidifrancia/cordova-plugin-screen-brightness.git</repo>
+    <issue>https://github.com/gidifrancia/cordova-plugin-screen-brightness/issues</issue>
+
+    <engines>
+        <engine name="cordova-android" version=">=10.0.0" />
+        <engine name="cordova-ios" version=">=6.0.0" />
+    </engines>
+
+    <js-module src="www/screenBrightness.js" name="ScreenBrightness">
+        <clobbers target="cordova.plugins.screenBrightness" />
+    </js-module>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="ScreenBrightness">
+                <param name="android-package" value="it.gidifrancia.brightness.ScreenBrightness" />
+            </feature>
+        </config-file>
+        <source-file src="src/android/ScreenBrightness.java" target-dir="src/it/gidifrancia/brightness" />
+    </platform>
+
+    <platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="ScreenBrightness">
+                <param name="ios-package" value="ScreenBrightness" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/ScreenBrightness.h" />
+        <source-file src="src/ios/ScreenBrightness.m" />
+    </platform>
+</plugin>
